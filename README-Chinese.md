@@ -74,7 +74,23 @@ client.start(function(err) {
 });
 ```
 
+在当前文件目录建立：`remote\test\service.js`文件，内容为：
+
+```javascript
+exports.fun = function(){
+    console.info(">>>>>>>>>>>>>>>>>>>>>");
+}
+
+exports.echo = function(str){
+    console.info("````````````````````````echo: ", str);
+}
+
+```
+
+
+
 ## Server API
+
 ### Server.create(opts)
 创建一个rpc server实例。根据配置信息加载远程服务代码，并生成底层acceptor。
 ### 参数
